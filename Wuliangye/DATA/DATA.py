@@ -227,3 +227,12 @@ class message(object):
         self.unreadMsgCount = self.url + "unreadMsgCount" ##未读消息统计
 
         self.updateInstationMsg = self.url+"updateInstationMsg" ## 修改消息  String phone, String token,Integer msgId,Integer readStatus
+
+class payOrder(object):
+    url = "http://wuliangye.scshangtong.com/puhuihua/external/pay/"
+    def __init__(self):
+        self.transferFamily = "http://wuliangye.scshangtong.com/puhuihua/app/userInfo/transferFamily" ## 向家属转账   String phone,String token,familyPhone,Integer transferAmount,String payPwd
+        self.codeCrreate = "http://wuliangye.scshangtong.com/puhuihua/app/wallet/codeCreate" #  二维码生成  String token,String phone,Integer type（31-和信通账户；33-银行卡）
+        self.placeAnOrder = self.url + "placeAnOrder" ## 统一下单  String phone,String token,String channelNo,String merchantId,Integer amount,String callBack,String desc,Integer orderType（1-消费；2-充值）
+        self.paymentOrder = self.url + "paymentOrder" ## 订单支付(账户余额、银行卡、专项资金)  String phone,String token,String payPwd,String orderNo,Integer payFlag(0-余额1-银行卡9-专项资金)
+        self.hexinCardRecharge = self.url + "hexinCardRecharge" ## 和信通卡订单充值  String phone,String token,String orderNo,String cardNo,String cardPwd
