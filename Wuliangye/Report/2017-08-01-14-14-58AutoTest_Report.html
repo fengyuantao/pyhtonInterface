@@ -1,0 +1,2957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>和信通接口测试自动化</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>和信通接口测试自动化</h1>
+<p class='attribute'><strong>Start Time:</strong> 2017-08-01 14:14:58</p>
+<p class='attribute'><strong>Duration:</strong> 0:01:04.311000</p>
+<p class='attribute'><strong>Status:</strong> Pass 26 Failure 35 Error 15</p>
+
+<p class='description'>用例执行情况：</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_01_CtqyBean.CtqyBean</td>
+    <td>11</td>
+    <td>7</td>
+    <td>4</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',11)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01_ctqy1: 查询接口-正常查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: (CtqyData){
+   cardTxns[] = 
+      (CardTxn){
+         adjustAmount = "1.00"
+         earnAmount = "1.00"
+         inputChannel = "onLine"
+         merchantNo = "510990310400307-ICåæ·éå½"
+         redeemAmount = "1.00"
+         status = "æå"
+         termNo = "00000338"
+         transferAmount = "1.00"
+         txnCode = "å¶ä»GRD"
+         txnDate = "20170724"
+         txnId = "8241116"
+         txnTime = "172059"
+      },
+      (CardTxn){
+         adjustAmount = "0.01"
+         earnAmount = "0.01"
+         inputChannel = "onLine"
+         merchantNo = "510990120400175-æé½å¤§é¾çé¤é¥®"
+         redeemAmount = "0.01"
+         status = "æå"
+         termNo = "00000201"
+         transferAmount = "0.01"
+         txnCode = "å¶ä»GRD"
+         txnDate = "20170724"
+         txnId = "8241109"
+         txnTime = "142346"
+      },
+      (CardTxn){
+         adjustAmount = "0.01"
+         earnAmount = "0.01"
+         inputChannel = "onLine"
+         merchantNo = "510990120400175-æé½å¤§é¾çé¤é¥®"
+         redeemAmount = "0.01"
+         status = "æå"
+         termNo = "00000201"
+         transferAmount = "0.01"
+         txnCode = "å¶ä»GRD"
+         txnDate = "20170721"
+         txnId = "8104773"
+         txnTime = "170641"
+      },
+      (CardTxn){
+         adjustAmount = "0.01"
+         earnAmount = "0.01"
+         inputChannel = "onLine"
+         merchantNo = "510990120400175-æé½å¤§é¾çé¤é¥®"
+         redeemAmount = "0.01"
+         status = "æå"
+         termNo = "00000201"
+         transferAmount = "0.01"
+         txnCode = "å¶ä»GRD"
+         txnDate = "20170721"
+         txnId = "8104772"
+         txnTime = "154407"
+      },
+   codeMsg = 
+      (CodeMsg){
+         code = "PZ"
+         msg = "æ¥è¯¢æå"
+      }
+   total = "4"
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02_ctqy2: 查询接口-卡号异常查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: (CtqyData){
+   codeMsg = 
+      (CodeMsg){
+         code = "PC"
+         msg = "å¡å·æ æ"
+      }
+   total = "0"
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03_ctqy3: 查询接口-开始日期异常查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: (CtqyData){
+   codeMsg = 
+      (CodeMsg){
+         code = "PG"
+         msg = "èµ·å§æ¥ææ æ"
+      }
+   total = "0"
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_04_ctqy4: 查询接口-结束日期异常查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
+        fail</a>
+
+    <div id='div_ft1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.4: (CtqyData){
+   codeMsg = 
+      (CodeMsg){
+         code = "PZ"
+         msg = "æ¥è¯¢æåï¼äº¤ææç»ä¸å­å¨"
+      }
+   total = "0"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_01_CtqyBean.py", line 49, in test_04_ctqy4
+    self.get_data(4,'PH',u'æ¥è¯¢æ¥å£-ç»ææ¥æå¼å¸¸æ¥è¯¢')
+  File "E:\pyFile\PPCM\interface\test_case\test_01_CtqyBean.py", line 30, in get_data
+    self.assertEqual(res[0][0],pc)
+AssertionError: PZ != 'PH'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05_ctqy5: 查询接口-分页无效测试</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: (CtqyData){
+   codeMsg = 
+      (CodeMsg){
+         code = "PD"
+         msg = "æ¯å¦åé¡µï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+      }
+   total = "0"
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06_ctqy6: 查询接口-商户号异常查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: (CtqyData){
+   codeMsg = 
+      (CodeMsg){
+         code = "PA"
+         msg = "ååºç¼å·æ æ"
+      }
+   total = "0"
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07_ctqy7: 查询接口-页码异常查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        pass</a>
+
+    <div id='div_pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.7: (CtqyData){
+   cardTxns[] = 
+      (CardTxn){
+         adjustAmount = "1.00"
+         earnAmount = "1.00"
+         inputChannel = "onLine"
+         merchantNo = "510990310400307-ICåæ·éå½"
+         redeemAmount = "1.00"
+         status = "æå"
+         termNo = "00000338"
+         transferAmount = "1.00"
+         txnCode = "å¶ä»GRD"
+         txnDate = "20170724"
+         txnId = "8241116"
+         txnTime = "172059"
+      },
+      (CardTxn){
+         adjustAmount = "0.01"
+         earnAmount = "0.01"
+         inputChannel = "onLine"
+         merchantNo = "510990120400175-æé½å¤§é¾çé¤é¥®"
+         redeemAmount = "0.01"
+         status = "æå"
+         termNo = "00000201"
+         transferAmount = "0.01"
+         txnCode = "å¶ä»GRD"
+         txnDate = "20170724"
+         txnId = "8241109"
+         txnTime = "142346"
+      },
+      (CardTxn){
+         adjustAmount = "0.01"
+         earnAmount = "0.01"
+         inputChannel = "onLine"
+         merchantNo = "510990120400175-æé½å¤§é¾çé¤é¥®"
+         redeemAmount = "0.01"
+         status = "æå"
+         termNo = "00000201"
+         transferAmount = "0.01"
+         txnCode = "å¶ä»GRD"
+         txnDate = "20170721"
+         txnId = "8104773"
+         txnTime = "170641"
+      },
+      (CardTxn){
+         adjustAmount = "0.01"
+         earnAmount = "0.01"
+         inputChannel = "onLine"
+         merchantNo = "510990120400175-æé½å¤§é¾çé¤é¥®"
+         redeemAmount = "0.01"
+         status = "æå"
+         termNo = "00000201"
+         transferAmount = "0.01"
+         txnCode = "å¶ä»GRD"
+         txnDate = "20170721"
+         txnId = "8104772"
+         txnTime = "154407"
+      },
+   codeMsg = 
+      (CodeMsg){
+         code = "PZ"
+         msg = "æ¥è¯¢æå"
+      }
+   total = "4"
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_08_ctqy8: 查询接口-查询类型异常查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+        pass</a>
+
+    <div id='div_pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.8: (CtqyData){
+   codeMsg = 
+      (CodeMsg){
+         code = "PI"
+         msg = "æ¥è¯¢ç±»åæ æï¼åªè½æ¯T-å½å¤©æ¥è¯¢ï¼H-åå²æ¥è¯¢"
+      }
+   total = "0"
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.9' class='none'>
+    <td class='failCase'><div class='testcase'>test_09_ctqy9: 查询接口-结束时间格式错误查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.9')" >
+        fail</a>
+
+    <div id='div_ft1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.9: (CtqyData){
+   codeMsg = 
+      (CodeMsg){
+         code = "99"
+         msg = "æ¥è¯¢å¤±è´¥ï¼ç³»ç»å¼å¸¸"
+      }
+   total = "0"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_01_CtqyBean.py", line 64, in test_09_ctqy9
+    self.get_data(9,'PH',u'æ¥è¯¢æ¥å£-ç»ææ¶é´æ ¼å¼éè¯¯æ¥è¯¢')
+  File "E:\pyFile\PPCM\interface\test_case\test_01_CtqyBean.py", line 30, in get_data
+    self.assertEqual(res[0][0],pc)
+AssertionError: 99 != 'PH'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.10' class='none'>
+    <td class='failCase'><div class='testcase'>test_10_ctqy10: 查询接口-无效卡号查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.10')" >
+        fail</a>
+
+    <div id='div_ft1.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.10: (CtqyData){
+   codeMsg = 
+      (CodeMsg){
+         code = "99"
+         msg = "æ¥è¯¢å¤±è´¥ï¼ç³»ç»å¼å¸¸"
+      }
+   total = "0"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_01_CtqyBean.py", line 67, in test_10_ctqy10
+    self.get_data(10,'PC',u'æ¥è¯¢æ¥å£-æ æå¡å·æ¥è¯¢')
+  File "E:\pyFile\PPCM\interface\test_case\test_01_CtqyBean.py", line 30, in get_data
+    self.assertEqual(res[0][0],pc)
+AssertionError: 99 != 'PC'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.11' class='none'>
+    <td class='failCase'><div class='testcase'>test_11_ctqy11: 查询接口-时间超过今日查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.11')" >
+        fail</a>
+
+    <div id='div_ft1.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.11: (CtqyData){
+   codeMsg = 
+      (CodeMsg){
+         code = "99"
+         msg = "æ¥è¯¢å¤±è´¥ï¼ç³»ç»å¼å¸¸"
+      }
+   total = "0"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_01_CtqyBean.py", line 70, in test_11_ctqy11
+    self.get_data(10,'PC',u'æ¥è¯¢æ¥å£-æ¶é´è¶è¿ä»æ¥æ¥è¯¢')
+  File "E:\pyFile\PPCM\interface\test_case\test_01_CtqyBean.py", line 30, in get_data
+    self.assertEqual(res[0][0],pc)
+AssertionError: 99 != 'PC'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_02_idadWithBill4BYJK.Idadwithbill</td>
+    <td>15</td>
+    <td>2</td>
+    <td>13</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',15)">Detail</a></td>
+</tr>
+
+<tr id='ft2.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_01_idadWith: 紧急扣款接口-商户终端无关扣费</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+        fail</a>
+
+    <div id='div_ft2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.1: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "05"
+   expiryDate = None
+   msg = "æ¯å¦éªè¯å¯ç ï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+   txnid = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 74, in test_01_idadWith
+    self.get_data(15,'97',u'ç´§æ¥æ£æ¬¾æ¥å£-åæ·ç»ç«¯æ å³æ£è´¹')
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 29, in get_data
+    self.assertEquals(res[3],pc)
+AssertionError: 05 != '97'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_02_idadWith2: 紧急扣款接口-无效卡号测试</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.2')" >
+        fail</a>
+
+    <div id='div_ft2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.2: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "05"
+   expiryDate = None
+   msg = "æ¯å¦éªè¯å¯ç ï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+   txnid = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 35, in test_02_idadWith2
+    self.get_data(2,'14',u'ç´§æ¥æ£æ¬¾æ¥å£-æ æå¡å·æµè¯')
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 29, in get_data
+    self.assertEquals(res[3],pc)
+AssertionError: 05 != '14'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03_idadWith3: 紧急扣款接口-卡号为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.3')" >
+        pass</a>
+
+    <div id='div_pt2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.3: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "14"
+   expiryDate = None
+   msg = "æ æå¡å·"
+   txnid = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_idadWith4: 紧急扣款接口-金额为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.4')" >
+        pass</a>
+
+    <div id='div_pt2.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.4: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "13"
+   expiryDate = None
+   msg = "æ æéé¢"
+   txnid = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_05_idadWith5: 紧急扣款接口-过期卡扣费</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.5')" >
+        fail</a>
+
+    <div id='div_ft2.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.5: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "05"
+   expiryDate = None
+   msg = "æ¯å¦éªè¯å¯ç ï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+   txnid = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 44, in test_05_idadWith5
+    self.get_data(5,'54',u'ç´§æ¥æ£æ¬¾æ¥å£-è¿æå¡æ£è´¹')
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 29, in get_data
+    self.assertEquals(res[3],pc)
+AssertionError: 05 != '54'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_06_idadWith6: 紧急扣款接口-余额为0扣费</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.6')" >
+        fail</a>
+
+    <div id='div_ft2.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.6: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "05"
+   expiryDate = None
+   msg = "æ¯å¦éªè¯å¯ç ï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+   txnid = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 47, in test_06_idadWith6
+    self.get_data(6,'51',u'ç´§æ¥æ£æ¬¾æ¥å£-ä½é¢ä¸º0æ£è´¹')
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 29, in get_data
+    self.assertEquals(res[3],pc)
+AssertionError: 05 != '51'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.7' class='none'>
+    <td class='failCase'><div class='testcase'>test_07_idadWith: 紧急扣款接口-积分通宝卡扣费</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.7')" >
+        fail</a>
+
+    <div id='div_ft2.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.7: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "05"
+   expiryDate = None
+   msg = "æ¯å¦éªè¯å¯ç ï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+   txnid = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 50, in test_07_idadWith
+    self.get_data(7,'0',u'ç´§æ¥æ£æ¬¾æ¥å£-ç§¯åéå®å¡æ£è´¹')
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 29, in get_data
+    self.assertEquals(res[3],pc)
+AssertionError: 05 != '0'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.8' class='none'>
+    <td class='failCase'><div class='testcase'>test_08_idadWith: 紧急扣款接口-积分通宝卡密码错误扣费</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.8')" >
+        fail</a>
+
+    <div id='div_ft2.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.8: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "05"
+   expiryDate = None
+   msg = "æ¯å¦éªè¯å¯ç ï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+   txnid = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 53, in test_08_idadWith
+    self.get_data(8,'02',u'ç´§æ¥æ£æ¬¾æ¥å£-ç§¯åéå®å¡å¯ç éè¯¯æ£è´¹')
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 29, in get_data
+    self.assertEquals(res[3],pc)
+AssertionError: 05 != '02'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.9' class='none'>
+    <td class='failCase'><div class='testcase'>test_09_idadWith: 紧急扣款接口-积分通宝卡密码为空扣费</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.9')" >
+        fail</a>
+
+    <div id='div_ft2.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.9: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "05"
+   expiryDate = None
+   msg = "æ¯å¦éªè¯å¯ç ï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+   txnid = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 56, in test_09_idadWith
+    self.get_data(9,'02',u'ç´§æ¥æ£æ¬¾æ¥å£-ç§¯åéå®å¡å¯ç ä¸ºç©ºæ£è´¹')
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 29, in get_data
+    self.assertEquals(res[3],pc)
+AssertionError: 05 != '02'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.10' class='none'>
+    <td class='failCase'><div class='testcase'>test_10_idadWith: 紧急扣款接口-积分通宝卡密码错误过多扣费</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.10')" >
+        fail</a>
+
+    <div id='div_ft2.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.10: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "05"
+   expiryDate = None
+   msg = "æ¯å¦éªè¯å¯ç ï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+   txnid = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 59, in test_10_idadWith
+    self.get_data(10,'03',u'ç´§æ¥æ£æ¬¾æ¥å£-ç§¯åéå®å¡å¯ç éè¯¯è¿å¤æ£è´¹')
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 29, in get_data
+    self.assertEquals(res[3],pc)
+AssertionError: 05 != '03'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.11' class='none'>
+    <td class='failCase'><div class='testcase'>test_11_idadWith: 紧急扣款接口-挂失卡扣费</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.11')" >
+        fail</a>
+
+    <div id='div_ft2.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.11: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "05"
+   expiryDate = None
+   msg = "æ¯å¦éªè¯å¯ç ï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+   txnid = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 62, in test_11_idadWith
+    self.get_data(11,'36',u'ç´§æ¥æ£æ¬¾æ¥å£-æå¤±å¡æ£è´¹')
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 29, in get_data
+    self.assertEquals(res[3],pc)
+AssertionError: 05 != '36'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.12' class='none'>
+    <td class='failCase'><div class='testcase'>test_12_idadWith: 紧急扣款接口-冻结卡扣费</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.12')" >
+        fail</a>
+
+    <div id='div_ft2.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.12: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "05"
+   expiryDate = None
+   msg = "æ¯å¦éªè¯å¯ç ï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+   txnid = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 65, in test_12_idadWith
+    self.get_data(12,'36',u'ç´§æ¥æ£æ¬¾æ¥å£-å»ç»å¡æ£è´¹')
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 29, in get_data
+    self.assertEquals(res[3],pc)
+AssertionError: 05 != '36'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.13' class='none'>
+    <td class='failCase'><div class='testcase'>test_13_idadWith: 紧急扣款接口-无效商户号扣费</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.13')" >
+        fail</a>
+
+    <div id='div_ft2.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.13: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "05"
+   expiryDate = None
+   msg = "æ¯å¦éªè¯å¯ç ï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+   txnid = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 68, in test_13_idadWith
+    self.get_data(13,'3',u'ç´§æ¥æ£æ¬¾æ¥å£-æ æåæ·å·æ£è´¹')
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 29, in get_data
+    self.assertEquals(res[3],pc)
+AssertionError: 05 != '3'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.14' class='none'>
+    <td class='failCase'><div class='testcase'>test_14_idadWith: 紧急扣款接口-无效商户号终端扣费</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.14')" >
+        fail</a>
+
+    <div id='div_ft2.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.14: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "05"
+   expiryDate = None
+   msg = "æ¯å¦éªè¯å¯ç ï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+   txnid = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 71, in test_14_idadWith
+    self.get_data(14,'97',u'ç´§æ¥æ£æ¬¾æ¥å£-æ æåæ·å·ç»ç«¯æ£è´¹')
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 29, in get_data
+    self.assertEquals(res[3],pc)
+AssertionError: 05 != '97'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.15' class='none'>
+    <td class='failCase'><div class='testcase'>test_15_idadWith1: 紧急扣款接口-正常交易测试</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.15')" >
+        fail</a>
+
+    <div id='div_ft2.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.15: (IdadBillData){
+   amount = None
+   balance = None
+   club = None
+   code = "05"
+   expiryDate = None
+   msg = "æ¯å¦éªè¯å¯ç ï¼åªè½æ¯Y-åé¡µï¼N-ä¸åé¡µ"
+   txnid = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 32, in test_15_idadWith1
+    self.get_data(1,'0',u'ç´§æ¥æ£æ¬¾æ¥å£-æ­£å¸¸äº¤ææµè¯')
+  File "E:\pyFile\PPCM\interface\test_case\test_02_idadWithBill4BYJK.py", line 29, in get_data
+    self.assertEquals(res[3],pc)
+AssertionError: 05 != '0'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_03_iprf.Idadwithbill</td>
+    <td>12</td>
+    <td>0</td>
+    <td>12</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',12)">Detail</a></td>
+</tr>
+
+<tr id='ft3.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_01_iprf: 退货接口-非本卡测试</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
+        fail</a>
+
+    <div id='div_ft3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.1: (CodeMsg){
+   code = "10"
+   msg = "åäº¤æå·²ç»éè¿è´§"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 27, in test_01_iprf
+    self.get_data(1,'02',u'éè´§æ¥å£-éæ¬å¡äº¤ææµè¯')
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 24, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: 10 != '02'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_02_iprf: 退货接口-正常卡号测试</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.2')" >
+        fail</a>
+
+    <div id='div_ft3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.2: (CodeMsg){
+   code = "10"
+   msg = "åäº¤æå·²ç»éè¿è´§"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 30, in test_02_iprf
+    self.get_data(2,'0',u'éè´§æ¥å£-æ­£å¸¸å¡å·æµè¯')
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 24, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: 10 != '0'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_03_iprf: 退货接口-重复退货</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.3')" >
+        fail</a>
+
+    <div id='div_ft3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.3: (CodeMsg){
+   code = "01"
+   msg = "æ æçäº¤ææµæ°´å·"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 33, in test_03_iprf
+    self.get_data(3,'10',u'éè´§æ¥å£-éå¤éè´§')
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 24, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: 01 != '10'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_04_iprf: 退货接口-金额为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.4')" >
+        fail</a>
+
+    <div id='div_ft3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.4: (CodeMsg){
+   code = "01"
+   msg = "æ æçäº¤ææµæ°´å·"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 36, in test_04_iprf
+    self.get_data(4,'03',u'éè´§æ¥å£-éé¢ä¸ºç©º')
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 24, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: 01 != '03'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_05_iprf: 退货接口-无效操作员编号</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.5')" >
+        fail</a>
+
+    <div id='div_ft3.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.5: (CodeMsg){
+   code = "01"
+   msg = "æ æçäº¤ææµæ°´å·"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 39, in test_05_iprf
+    self.get_data(5,'05',u'éè´§æ¥å£-æ ææä½åç¼å·')
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 24, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: 01 != '05'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_06_iprf: 退货接口-退货金额操作交易金额</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.6')" >
+        fail</a>
+
+    <div id='div_ft3.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.6: (CodeMsg){
+   code = "01"
+   msg = "æ æçäº¤ææµæ°´å·"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 42, in test_06_iprf
+    self.get_data(6,'09',u'éè´§éé¢è¶è¿äº¤æéé¢')
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 24, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: 01 != '09'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.7' class='none'>
+    <td class='failCase'><div class='testcase'>test_07_iprf: 退货接口-卡状态不正常</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.7')" >
+        fail</a>
+
+    <div id='div_ft3.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.7: (CodeMsg){
+   code = "01"
+   msg = "æ æçäº¤ææµæ°´å·"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 45, in test_07_iprf
+    self.get_data(7,'07',u'éè´§æ¥å£-å¡ç¶æä¸æ­£å¸¸')
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 24, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: 01 != '07'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.8' class='none'>
+    <td class='failCase'><div class='testcase'>test_08_iprf: 退货接口-无效商户号</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.8')" >
+        fail</a>
+
+    <div id='div_ft3.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.8: (CodeMsg){
+   code = "01"
+   msg = "æ æçäº¤ææµæ°´å·"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 48, in test_08_iprf
+    self.get_data(8,'04',u'éè´§æ¥å£-æ æåæ·å·')
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 24, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: 01 != '04'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.9' class='none'>
+    <td class='failCase'><div class='testcase'>test_09_iprf: 退货接口-商户号空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.9')" >
+        fail</a>
+
+    <div id='div_ft3.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.9: (CodeMsg){
+   code = "01"
+   msg = "æ æçäº¤ææµæ°´å·"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 51, in test_09_iprf
+    self.get_data(9,'04',u'éè´§æ¥å£-åæ·å·ç©º')
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 24, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: 01 != '04'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.10' class='none'>
+    <td class='failCase'><div class='testcase'>test_10_iprf: 退货接口-卡号为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.10')" >
+        fail</a>
+
+    <div id='div_ft3.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.10: (CodeMsg){
+   code = "01"
+   msg = "æ æçäº¤ææµæ°´å·"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 54, in test_10_iprf
+    self.get_data(10,'02',u'éè´§æ¥å£-å¡å·ä¸ºç©º')
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 24, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: 01 != '02'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.11' class='none'>
+    <td class='failCase'><div class='testcase'>test_11_iprf: 退货接口-流水编号为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.11')" >
+        fail</a>
+
+    <div id='div_ft3.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.11: (CodeMsg){
+   code = "01"
+   msg = "æ æçäº¤ææµæ°´å·"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 57, in test_11_iprf
+    self.get_data(11,'11',u'éè´§æ¥å£-æµæ°´ç¼å·ä¸ºç©º')
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 24, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: 01 != '11'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.12' class='none'>
+    <td class='failCase'><div class='testcase'>test_12_iprf: 退货接口-流水编号错误</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.12')" >
+        fail</a>
+
+    <div id='div_ft3.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.12: (CodeMsg){
+   code = "08"
+   msg = "åäº¤æä¸å­å¨"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 60, in test_12_iprf
+    self.get_data(12,'11',u'éè´§æ¥å£-æµæ°´ç¼å·éè¯¯')
+  File "E:\pyFile\PPCM\interface\test_case\test_03_iprf.py", line 24, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: 08 != '11'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_04_infoByAll.InfoByAll</td>
+    <td>13</td>
+    <td>0</td>
+    <td>0</td>
+    <td>13</td>
+    <td><a href="javascript:showClassDetail('c4',13)">Detail</a></td>
+</tr>
+
+<tr id='ft4.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_01_IbaBean: 卡信息查询接口-挂失卡测试</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.1')" >
+        error</a>
+
+    <div id='div_ft4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.1: Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 35, in test_01_IbaBean
+    self.get_data(1,'00',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-æå¤±å¡æ¥è¯¢')
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 11, in get_data
+    d = self.find.find_data('test_infobyall',id)
+  File "E:\pyFile\PPCM\interface\test_case\public\Connect_SQL.py", line 35, in find_data
+    self.cur.execute(sql1.format(table,id))
+AttributeError: 'NoneType' object has no attribute 'format'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_02_IbaBean: 卡信息查询接口-正常卡号测试</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.2')" >
+        error</a>
+
+    <div id='div_ft4.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.2: Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 38, in test_02_IbaBean
+    self.get_data(2,'00',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-æ­£å¸¸å¡å·æµè¯')
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 11, in get_data
+    d = self.find.find_data('test_infobyall',id)
+  File "E:\pyFile\PPCM\interface\test_case\public\Connect_SQL.py", line 35, in find_data
+    self.cur.execute(sql1.format(table,id))
+AttributeError: 'NoneType' object has no attribute 'format'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_03_IbaBean: 卡信息查询接口-密码无效</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.3')" >
+        error</a>
+
+    <div id='div_ft4.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.3: Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 41, in test_03_IbaBean
+    self.get_data(3,'02',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-å¯ç æ æ')
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 11, in get_data
+    d = self.find.find_data('test_infobyall',id)
+  File "E:\pyFile\PPCM\interface\test_case\public\Connect_SQL.py", line 35, in find_data
+    self.cur.execute(sql1.format(table,id))
+AttributeError: 'NoneType' object has no attribute 'format'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_04_IbaBean: 卡信息查询接口-密码为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.4')" >
+        error</a>
+
+    <div id='div_ft4.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.4: Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 44, in test_04_IbaBean
+    self.get_data(4,'02',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-å¯ç ä¸ºç©º')
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 11, in get_data
+    d = self.find.find_data('test_infobyall',id)
+  File "E:\pyFile\PPCM\interface\test_case\public\Connect_SQL.py", line 35, in find_data
+    self.cur.execute(sql1.format(table,id))
+AttributeError: 'NoneType' object has no attribute 'format'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_05_IbaBean: 卡信息查询接口-操作员为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.5')" >
+        error</a>
+
+    <div id='div_ft4.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.5: Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 47, in test_05_IbaBean
+    self.get_data(5,'07',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-æä½åä¸ºç©º')
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 11, in get_data
+    d = self.find.find_data('test_infobyall',id)
+  File "E:\pyFile\PPCM\interface\test_case\public\Connect_SQL.py", line 35, in find_data
+    self.cur.execute(sql1.format(table,id))
+AttributeError: 'NoneType' object has no attribute 'format'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_06_IbaBean: 卡信息查询接口-卡号不存在</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.6')" >
+        error</a>
+
+    <div id='div_ft4.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.6: Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 50, in test_06_IbaBean
+    self.get_data(6,'10',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-å¡å·ä¸å­å¨')
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 11, in get_data
+    d = self.find.find_data('test_infobyall',id)
+  File "E:\pyFile\PPCM\interface\test_case\public\Connect_SQL.py", line 35, in find_data
+    self.cur.execute(sql1.format(table,id))
+AttributeError: 'NoneType' object has no attribute 'format'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_07_IbaBean: 卡信息查询接口-卡位数不正确</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.7')" >
+        error</a>
+
+    <div id='div_ft4.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.7: Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 53, in test_07_IbaBean
+    self.get_data(7,'10',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-å¡ä¿¡æ¯æ¥è¯¢æ¥å£-å¡ä½æ°ä¸æ­£ç¡®')
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 11, in get_data
+    d = self.find.find_data('test_infobyall',id)
+  File "E:\pyFile\PPCM\interface\test_case\public\Connect_SQL.py", line 35, in find_data
+    self.cur.execute(sql1.format(table,id))
+AttributeError: 'NoneType' object has no attribute 'format'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_08_IbaBean: 卡信息查询接口-卡号无效</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.8')" >
+        error</a>
+
+    <div id='div_ft4.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.8: Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 56, in test_08_IbaBean
+    self.get_data(8,'05',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-å¡å·æ æ')
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 11, in get_data
+    d = self.find.find_data('test_infobyall',id)
+  File "E:\pyFile\PPCM\interface\test_case\public\Connect_SQL.py", line 35, in find_data
+    self.cur.execute(sql1.format(table,id))
+AttributeError: 'NoneType' object has no attribute 'format'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.9' class='none'>
+    <td class='errorCase'><div class='testcase'>test_09_IbaBean: 卡信息查询接口-商户号错误</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.9')" >
+        error</a>
+
+    <div id='div_ft4.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.9: Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 59, in test_09_IbaBean
+    self.get_data(9,'06',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-åæ·å·éè¯¯')
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 11, in get_data
+    d = self.find.find_data('test_infobyall',id)
+  File "E:\pyFile\PPCM\interface\test_case\public\Connect_SQL.py", line 35, in find_data
+    self.cur.execute(sql1.format(table,id))
+AttributeError: 'NoneType' object has no attribute 'format'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.10' class='none'>
+    <td class='errorCase'><div class='testcase'>test_10_IbaBean: 卡信息查询接口-商户号为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.10')" >
+        error</a>
+
+    <div id='div_ft4.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.10: Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 62, in test_10_IbaBean
+    self.get_data(10,'06',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-åæ·å·ä¸ºç©º')
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 11, in get_data
+    d = self.find.find_data('test_infobyall',id)
+  File "E:\pyFile\PPCM\interface\test_case\public\Connect_SQL.py", line 35, in find_data
+    self.cur.execute(sql1.format(table,id))
+AttributeError: 'NoneType' object has no attribute 'format'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.11' class='none'>
+    <td class='errorCase'><div class='testcase'>test_11_IbaBean: 卡信息查询接口-验证密码参数无效</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.11')" >
+        error</a>
+
+    <div id='div_ft4.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.11: Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 65, in test_11_IbaBean
+    self.get_data(11,'08',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-éªè¯å¯ç åæ°æ æ')
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 11, in get_data
+    d = self.find.find_data('test_infobyall',id)
+  File "E:\pyFile\PPCM\interface\test_case\public\Connect_SQL.py", line 35, in find_data
+    self.cur.execute(sql1.format(table,id))
+AttributeError: 'NoneType' object has no attribute 'format'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.12' class='none'>
+    <td class='errorCase'><div class='testcase'>test_12_IbaBean: 卡信息查询接口-验证密码参数为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.12')" >
+        error</a>
+
+    <div id='div_ft4.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.12: Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 68, in test_12_IbaBean
+    self.get_data(12,'08',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-éªè¯å¯ç åæ°ä¸ºç©º')
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 11, in get_data
+    d = self.find.find_data('test_infobyall',id)
+  File "E:\pyFile\PPCM\interface\test_case\public\Connect_SQL.py", line 35, in find_data
+    self.cur.execute(sql1.format(table,id))
+AttributeError: 'NoneType' object has no attribute 'format'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.13' class='none'>
+    <td class='errorCase'><div class='testcase'>test_13_IbaBean: 卡信息查询接口-密码输入超长</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.13')" >
+        error</a>
+
+    <div id='div_ft4.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.13: Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 71, in test_13_IbaBean
+    self.get_data(13,'04',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-å¯ç è¾å¥è¶é¿')
+  File "E:\pyFile\PPCM\interface\test_case\test_04_infoByAll.py", line 11, in get_data
+    d = self.find.find_data('test_infobyall',id)
+  File "E:\pyFile\PPCM\interface\test_case\public\Connect_SQL.py", line 35, in find_data
+    self.cur.execute(sql1.format(table,id))
+AttributeError: 'NoneType' object has no attribute 'format'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_05_islvBy.IslvBy</td>
+    <td>22</td>
+    <td>16</td>
+    <td>6</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',22)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01_islvBy: 充值接口-单卡正常充值</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
+        pass</a>
+
+    <div id='div_pt5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.1: (ByCodeMsg){
+   code = "HZ"
+   msg = "åå¼æå"
+   serialNo = "8253897"
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02_islvBy: 充值接口-单卡0金额充值</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.2')" >
+        pass</a>
+
+    <div id='div_pt5.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.2: (ByCodeMsg){
+   code = "HI"
+   msg = "åå¼éé¢æ æ"
+   serialNo = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03_islvBy: 充值接口-负数金额充值</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.3')" >
+        pass</a>
+
+    <div id='div_pt5.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.3: (ByCodeMsg){
+   code = "HI"
+   msg = "åå¼éé¢æ æ"
+   serialNo = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_islvBy: 充值接口-余额超过上限</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.4')" >
+        pass</a>
+
+    <div id='div_pt5.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.4: (ByCodeMsg){
+   code = "HV"
+   msg = "ä½é¢è¶è¿ä¸é"
+   serialNo = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05_islvBy: 充值接口-金额打折0.5</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.5')" >
+        pass</a>
+
+    <div id='div_pt5.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.5: (ByCodeMsg){
+   code = "HZ"
+   msg = "åå¼æå"
+   serialNo = "8253898"
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft5.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_06_islvBy: 充值接口-打折金额大于原始金额</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.6')" >
+        fail</a>
+
+    <div id='div_ft5.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.6: (ByCodeMsg){
+   code = "HZ"
+   msg = "åå¼æå"
+   serialNo = "8253899"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_05_islvBy.py", line 47, in test_06_islvBy
+    self.get_data(6,'H1',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-ææéé¢å¤§äºåå§éé¢')
+  File "E:\pyFile\PPCM\interface\test_case\test_05_islvBy.py", line 29, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: HZ != 'H1'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07_islvBy: 充值接口-打折金额为负数</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.7')" >
+        pass</a>
+
+    <div id='div_pt5.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.7: (ByCodeMsg){
+   code = "HZ"
+   msg = "åå¼æå"
+   serialNo = "8253900"
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft5.8' class='none'>
+    <td class='failCase'><div class='testcase'>test_08_islvBy: 充值接口-卡号无效</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.8')" >
+        fail</a>
+
+    <div id='div_ft5.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.8: (ByCodeMsg){
+   code = "HT"
+   msg = "è¯¥æ¹å®é¢å¡æ»é¢ä¸å®åæ»é¢ä¸ç¬¦"
+   serialNo = None
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_05_islvBy.py", line 53, in test_08_islvBy
+    self.get_data(8,'HC',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-å¡å·æ æ')
+  File "E:\pyFile\PPCM\interface\test_case\test_05_islvBy.py", line 29, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: HT != 'HC'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_09_islvBy: 充值接口-起始卡号为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.9')" >
+        pass</a>
+
+    <div id='div_pt5.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.9: (ByCodeMsg){
+   code = "HC"
+   msg = "èµ·å§å¡å·æ æ"
+   serialNo = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_10_islvBy: 充值接口-终止卡号为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.10')" >
+        pass</a>
+
+    <div id='div_pt5.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.10: (ByCodeMsg){
+   code = "HD"
+   msg = "ç»æ­¢å¡å·æ æ"
+   serialNo = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_11_islvBy: 充值接口-充值金额为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.11')" >
+        pass</a>
+
+    <div id='div_pt5.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.11: (ByCodeMsg){
+   code = "HI"
+   msg = "åå¼éé¢æ æ"
+   serialNo = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_12_islvBy: 充值接口-充值金额小数点多余</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.12')" >
+        pass</a>
+
+    <div id='div_pt5.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.12: (ByCodeMsg){
+   code = "HI"
+   msg = "åå¼éé¢æ æ"
+   serialNo = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_13_islvBy: 充值接口-该批定额卡总额与售卖总额不符</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.13')" >
+        pass</a>
+
+    <div id='div_pt5.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.13: (ByCodeMsg){
+   code = "HT"
+   msg = "è¯¥æ¹å®é¢å¡æ»é¢ä¸å®åæ»é¢ä¸ç¬¦"
+   serialNo = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft5.14' class='none'>
+    <td class='failCase'><div class='testcase'>test_14_islvBy: 充值接口-购卡人字数太长</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.14')" >
+        fail</a>
+
+    <div id='div_ft5.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.14: (ByCodeMsg){
+   code = "HZ"
+   msg = "åå¼æå"
+   serialNo = "8253901"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_05_islvBy.py", line 71, in test_14_islvBy
+    self.get_data(14,'HB',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-è´­å¡äººå­æ°å¤ªé¿')
+  File "E:\pyFile\PPCM\interface\test_case\test_05_islvBy.py", line 29, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: HZ != 'HB'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft5.15' class='none'>
+    <td class='failCase'><div class='testcase'>test_15_islvBy: 充值接口-有效期无效</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.15')" >
+        fail</a>
+
+    <div id='div_ft5.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.15: (ByCodeMsg){
+   code = "HZ"
+   msg = "åå¼æå"
+   serialNo = "8253902"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_05_islvBy.py", line 74, in test_15_islvBy
+    self.get_data(15,'HF',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-ææææ æ')
+  File "E:\pyFile\PPCM\interface\test_case\test_05_islvBy.py", line 29, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: HZ != 'HF'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_16_islvBy: 充值接口-门店错误</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.16')" >
+        pass</a>
+
+    <div id='div_pt5.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.16: (ByCodeMsg){
+   code = "HG"
+   msg = "åæ·ä¸å­å¨"
+   serialNo = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.17' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_17_islvBy: 充值接口-门店为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.17')" >
+        pass</a>
+
+    <div id='div_pt5.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.17: (ByCodeMsg){
+   code = "HG"
+   msg = "ååºç¼å·æ æ"
+   serialNo = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.18' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_18_islvBy: 充值接口-操作员为空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.18')" >
+        pass</a>
+
+    <div id='div_pt5.18' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.18').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.18: (ByCodeMsg){
+   code = "HJ"
+   msg = "æä½åæ æ"
+   serialNo = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.19' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_19_islvBy: 充值接口-200张卡充值</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.19')" >
+        pass</a>
+
+    <div id='div_pt5.19' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.19').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.19: (ByCodeMsg){
+   code = "HZ"
+   msg = "åå¼æå"
+   serialNo = "8254102"
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft5.20' class='none'>
+    <td class='failCase'><div class='testcase'>test_20_islvBy: 充值接口-冻结卡充值</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.20')" >
+        fail</a>
+
+    <div id='div_ft5.20' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.20').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.20: (ByCodeMsg){
+   code = "HZ"
+   msg = "åå¼æå"
+   serialNo = "8254103"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_05_islvBy.py", line 89, in test_20_islvBy
+    self.get_data(20,'HR',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-å»ç»å¡åå¼')
+  File "E:\pyFile\PPCM\interface\test_case\test_05_islvBy.py", line 29, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: HZ != 'HR'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.21' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_21_islvBy: 充值接口-起始卡号必须小于终止卡号</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.21')" >
+        pass</a>
+
+    <div id='div_pt5.21' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.21').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.21: (ByCodeMsg){
+   code = "HX"
+   msg = "èµ·å§å¡å·å¿é¡»å°äºç»æ­¢å¡å·"
+   serialNo = None
+ }
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft5.22' class='none'>
+    <td class='failCase'><div class='testcase'>test_22_islvBy: 充值接口-该批非定额卡状态不一致</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.22')" >
+        fail</a>
+
+    <div id='div_ft5.22' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.22').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.22: (ByCodeMsg){
+   code = "HZ"
+   msg = "åå¼æå"
+   serialNo = "8254603"
+ }
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_05_islvBy.py", line 95, in test_22_islvBy
+    self.get_data(22,'HS',u'å¡ä¿¡æ¯æ¥è¯¢æ¥å£-è¯¥æ¹éå®é¢å¡ç¶æä¸ä¸è´')
+  File "E:\pyFile\PPCM\interface\test_case\test_05_islvBy.py", line 29, in get_data
+    self.assertEquals(res[0],pc)
+AssertionError: HZ != 'HS'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_06_idvvBy.IdvvBy</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c6',1)">Detail</a></td>
+</tr>
+
+<tr id='ft6.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_01_idvvBy: 充值撤销接口-单卡正常充值撤销</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.1')" >
+        error</a>
+
+    <div id='div_ft6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.1: None
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_06_idvvBy.py", line 30, in test_01_idvvBy
+    self.get_data(1,None,u'åå¼æ¤éæ¥å£-åå¡æ­£å¸¸åå¼æ¤é')
+  File "E:\pyFile\PPCM\interface\test_case\test_06_idvvBy.py", line 23, in get_data
+    self.assertEquals(res[0],pc)
+TypeError: 'NoneType' object has no attribute '__getitem__'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_07_stat.IdvvBy</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c7',1)">Detail</a></td>
+</tr>
+
+<tr id='ft7.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_01_idvvBy: 充值撤销接口-单卡正常充值撤销</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.1')" >
+        error</a>
+
+    <div id='div_ft7.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.1: None
+Traceback (most recent call last):
+  File "E:\pyFile\PPCM\interface\test_case\test_07_stat.py", line 30, in test_01_idvvBy
+    self.get_data(1,None,u'åå¼æ¤éæ¥å£-åå¡æ­£å¸¸åå¼æ¤é')
+  File "E:\pyFile\PPCM\interface\test_case\test_07_stat.py", line 23, in get_data
+    self.assertEquals(res[0],pc)
+TypeError: 'NoneType' object has no attribute '__getitem__'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_payManageTag.Pay</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',1)">Detail</a></td>
+</tr>
+
+<tr id='pt8.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_calls: 消费接口</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.1')" >
+        pass</a>
+
+    <div id='div_pt8.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.1: [P1, A12, 0000, None]
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>76</td>
+    <td>26</td>
+    <td>35</td>
+    <td>15</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
