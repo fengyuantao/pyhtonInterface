@@ -53,7 +53,7 @@ class Information(unittest.TestCase):
                 print result._content
                 print "*"* self.num
 
-        listpaID = ['dynamicInfoList','mutualList','promotionList','legalList','psychologyList']
+        listpaID = ['dynamicInfoList','mutualList','promotionList','legalList','psychologyList','consultationList']
         parms_listpageNo = {"pageNo":1}
         parms_ID= {"id":1}
 
@@ -63,26 +63,30 @@ class Information(unittest.TestCase):
                     '__str__', '__subclasshook__', '__weakref__', 'activityApply', 'activityChannel'
             , 'activityDetail', 'activityList','hostInfoChannel','hostInfoList','hostInfoDetail','url',
                     'dynamicInfoList','mutualList','promotionList','legalList','psychologyList','fetchActiveityField'
-                    ]
+                    ,"consultationList",'povertyList','povertyDetail']
 
         listpageNo = [i for i in dir(self.url) if i not in thisList]
-
         res_dict = {}
-
         for pageNo in listpaID:
             print "get {}:".format(pageNo)
-            result = requests.get(self.url.__dict__[pageNo],params=parms_listpageNo)
+            if pageNo == 'consultationList':
+                result = requests.post(self.url.__dict__[pageNo],data={'phone':'17761196077','token':'1f7e0db62349483d9f0b43dbd6318985_app','pageNo':1})
+            else:
+                result = requests.get(self.url.__dict__[pageNo],params=parms_listpageNo)
+                res_dict[pageNo[:4]] = result.json()["data"][0]["issueId"]
             print result._content
             print "*"* self.num
-            res_dict[pageNo[:4]] = result.json()["data"][0]["issueId"]
+        print res_dict
 
         for pageNo in  listpageNo:
             print "get {}:".format(pageNo)
-            parms_ID["id"] = res_dict[pageNo[:4]]
-            result = requests.get(self.url.__dict__[pageNo],params=parms_ID)
+            if pageNo == 'addConsultation':
+                result = requests.post(self.url.__dict__[pageNo],data={'phone':'17761196077','token':'1f7e0db62349483d9f0b43dbd6318985_app','content':'today we will test this function:{}'.format(time.asctime())})
+            else:
+                parms_ID["id"] = res_dict[pageNo[:4]]
+                result = requests.get(self.url.__dict__[pageNo],params=parms_ID)
             print result._content
             print "*"* self.num
-
 
     def tearDown(self):
         pass
