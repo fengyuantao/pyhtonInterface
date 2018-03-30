@@ -5,22 +5,29 @@ import requests
 import json
 import time
 import sys
+from public import get_log
 sys.path.append("..")
 from DATA import DATA
 ## 获取验证码码
 #login
-sendCode = requests.post(DATA.sendSecurityCode(),data={'phone':'17761196077'})
+logger = get_log
+phone = "18683953197"
+sendCode = requests.post(DATA.sendSecurityCode(),data={'phone':phone})
+
 securityCode = raw_input("securityCode:")
 
-
-validateCode = requests.post(DATA.validateCode(),data={'phone':'17761196077','code':securityCode})
+data1 = {'phone':phone,'code':securityCode}
+validateCode = requests.post(DATA.validateCode(),data=data1)
 validateStr =  validateCode.json()["data"]
-print validateCode._content
+
+logger.insertLog(DATA.validateCode(),data1,validateCode.text)
+
 url = DATA.register()
-data = {'phone':'17761196077','activeCode':'914299','validateStr':validateStr,'terminal':'app','loginDevice':2}
+data = {'phone':phone,'activeCode':'910350','validateStr':validateStr,'terminal':'app','loginDevice':2}
 
 result = requests.post(url=url,data=data)
-print result._content
+logger.insertLog(url,data,result.text)
+
 
 '''
 login = requests.post(DATA.login(),data={'phone':'17761196077','securityCode':securityCode,'terminal':'app','loginDevice':2})

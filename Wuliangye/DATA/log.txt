@@ -1,0 +1,405 @@
+2018-03-30 10:18:27,476 - __main__ - INFO - 测试接口:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/userInfo----- 返回结果：{"success":true,"errorCode":null,"error":null,"data":{"balance":"910.49","phone":"15680785518","nickName":"gh55185","welfareFlag":null,"headImage":null,"depName":null,"unionId":5,"userName":"*df","depId":0,"unionName":null,"userType":"0"}}
+2018-03-30 10:22:40,424 - public.get_log - INFO - 测试接口:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/userInfo----- 返回结果：{"success":true,"errorCode":null,"error":null,"data":{"balance":"910.49","phone":"15680785518","nickName":"gh55185","welfareFlag":null,"headImage":null,"depName":null,"unionId":5,"userName":"*df","depId":0,"unionName":null,"userType":"0"}}
+2018-03-30 10:24:12,809 - public.get_log - INFO - 测试接口:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/userInfo----- 返回结果：{"success":true,"errorCode":null,"error":null,"data":{"balance":"910.49","phone":"15680785518","nickName":"gh55185","welfareFlag":null,"headImage":null,"depName":null,"unionId":5,"userName":"*df","depId":0,"unionName":null,"userType":"0"}}
+2018-03-30 10:29:29,466 - public.get_log - INFO - ---Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/userInfo
+2018-03-30 10:29:29,467 - public.get_log - INFO - ---Insert Data:{"success":true,"errorCode":null,"error":null,"data":{"balance":"3285.96","phone":"17761196077","nickName":"gh60776","welfareFlag":null,"headImage":null,"depName":null,"unionId":7,"userName":"苦左","depId":0,"unionName":null,"userType":"0"}}
+2018-03-30 10:30:32,253 - public.get_log - INFO - ---Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/userInfo
+2018-03-30 10:30:32,253 - public.get_log - INFO - ---Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 10:30:32,253 - public.get_log - INFO - ---Return Data:{"success":true,"errorCode":null,"error":null,"data":{"balance":"3285.96","phone":"17761196077","nickName":"gh60776","welfareFlag":null,"headImage":null,"depName":null,"unionId":7,"userName":"苦左","depId":0,"unionName":null,"userType":"0"}}
+2018-03-30 10:31:04,444 - public.get_log - INFO - ---Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 10:31:04,444 - public.get_log - INFO - ---Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 10:31:04,444 - public.get_log - INFO - ---Return Data:{"success":true,"errorCode":null,"error":null,"data":[{"balance":"3285.96","phone":"15566666661","relation":"父子","userStatus":0,"userName":"fds"},{"balance":"3285.96","phone":"15680785517","relation":"配偶","userStatus":2,"userName":"feng"}]}
+2018-03-30 10:31:22,969 - public.get_log - INFO - ---Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/userInfo
+2018-03-30 10:31:22,969 - public.get_log - INFO - ---Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 10:31:22,969 - public.get_log - INFO - ---Return Data:{"success":true,"errorCode":null,"error":null,"data":{"balance":"910.49","phone":"15680785518","nickName":"gh55185","welfareFlag":null,"headImage":null,"depName":null,"unionId":5,"userName":"*df","depId":0,"unionName":null,"userType":"0"}}
+2018-03-30 10:31:37,730 - public.get_log - INFO - ---Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 10:31:37,730 - public.get_log - INFO - ---Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 10:31:37,730 - public.get_log - INFO - ---Return Data:{"success":true,"errorCode":null,"error":null,"data":[{"balance":"910.49","phone":"18683953197","relation":"配偶","userStatus":0,"userName":"18683953197"}]}
+2018-03-30 10:40:25,668 - public.get_log - INFO - ####---#### Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 10:40:25,668 - public.get_log - INFO - ####---#### Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 10:40:25,668 - public.get_log - INFO - ####---#### Return Data:{"success":false,"errorCode":9003,"error":"账号未激活","data":null}
+2018-03-30 10:58:59,763 - public.get_log - INFO - ####---#### Return Data:{"success":true,"errorCode":11,"error":"获取付款码失败！","data":null}
+2018-03-30 11:22:18,121 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/activityChannel
+2018-03-30 11:24:34,642 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/activityChannel
+2018-03-30 11:24:34,642 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":[{"cover":null,"channelId":10,"name":"活动类别3"},{"cover":null,"channelId":16,"name":"活动类别4"},{"cover":null,"channelId":25,"name":"活动类别2"},{"cover":null,"channelId":27,"name":"活动类别8"},{"cover":null,"channelId":42,"name":"活动类别17"},{"cover":null,"channelId":51,"name":"活动类别19"},{"cover":null,"channelId":71,"name":"活动类别15"},{"cover":null,"channelId":81,"name":"活动类别1"},{"cover":null,"channelId":91,"name":"活动类别18"}]}
+2018-03-30 11:24:34,644 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:34,703 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/activityList?channelType=10&timeType=1&pageNo=1
+2018-03-30 11:24:34,703 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":[{"statusCode":5,"author":"总工会","createTime":"2017-08-01 15:23:57","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/activityIssue/618724b675624c9abe4020437f5c7a5a.png","title":"关于学习和贯彻党的十九大会议精神的讲话22","issueId":101,"statusDesc":"活动已结束"}]}
+2018-03-30 11:24:34,703 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:34,753 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/activityDetail?issueId=101
+2018-03-30 11:24:34,755 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":{"statusCode":5,"content":"<p><img src=\"http://wuliangye.scshangtong.com/fileUpload/static/upload/ueditor/image/20180202/1517556235973010894.png\" title=\"1517556235973010894.png\" alt=\"替换图.png\"/></p>","author":"总工会","createTime":"2017-08-01 15:23:57","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/activityIssue/618724b675624c9abe4020437f5c7a5a.png","title":"关于学习和贯彻党的十九大会议精神的讲话22","issueId":101,"isArticle":2,"statusDesc":"活动已结束"}}
+2018-03-30 11:24:34,755 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:34,795 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/dynamicInfoList?pageNo=1
+2018-03-30 11:24:34,795 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":[{"createTime":"2018-02-02 15:32:20","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/dynamicIssue/9ec821854ba54833bc896fc740579923.png","title":"关于学习和贯彻党的十九大会议精神的讲话7","issueId":31}]}
+2018-03-30 11:24:34,795 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:34,848 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/mutualList?pageNo=1
+2018-03-30 11:24:34,848 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":[{"createTime":"2018-02-02 15:24:30","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/mutualIssue/a0538f001a5c4bfeb6954d9e2525af77.png","title":"关于学习和贯彻党的十九大会议精神的讲话20","issueId":51}]}
+2018-03-30 11:24:34,848 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:34,910 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/promotionList?pageNo=1
+2018-03-30 11:24:34,910 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":[{"createTime":"2018-02-02 15:31:03","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/promotionIssue/7855b41212194b2a801523aef003006c.png","title":"关于学习和贯彻党的十九大会议精神的讲话21","issueId":31}]}
+2018-03-30 11:24:34,910 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:34,966 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/legalList?pageNo=1
+2018-03-30 11:24:34,966 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":[{"createTime":"2018-02-02 15:30:36","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/legalIssue/c193b8de4dec4f8b9d847ac32195e260.png","title":"关于学习和贯彻党的十九大会议精神的讲话23","issueId":41}]}
+2018-03-30 11:24:34,967 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:35,012 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/psychologyList?pageNo=1
+2018-03-30 11:24:35,012 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":[{"createTime":"2018-02-02 15:31:34","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/psychologyIssue/c9e8fb67da8d45c7932f9cb29272f6e1.png","title":"关于学习和贯彻党的十九大会议精神的讲话6","issueId":31}]}
+2018-03-30 11:24:35,012 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:35,095 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/consultationList
+2018-03-30 11:24:35,095 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":[{"feedback":null,"content":"today we will test this function:Fri Mar 30 09:20:52 2018","nickname":"gh60776","headImage":null},{"feedback":null,"content":"today we will test this function:Fri Mar 30 09:20:02 2018","nickname":"gh60776","headImage":null},{"feedback":null,"content":"today we will test this function:Thu Mar 29 15:30:24 2018","nickname":"gh60776","headImage":null},{"feedback":null,"content":"today we will test this function:Thu Mar 29 15:28:46 2018","nickname":"gh60776","headImage":null}]}
+2018-03-30 11:24:35,095 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:35,095 - public.get_log - INFO - {'lega': 41, 'prom': 31, 'psyc': 31, 'dyna': 31, 'mutu': 51}
+2018-03-30 11:24:35,148 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/addConsultation
+2018-03-30 11:24:35,148 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":null}
+2018-03-30 11:24:35,148 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:35,236 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/dynamicInfoDetail?id=31
+2018-03-30 11:24:35,236 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":{"content":"<p><img src=\"http://wuliangye.scshangtong.com/fileUpload/static/upload/ueditor/image/20180202/1517556738894051694.png\" title=\"1517556738894051694.png\" alt=\"替换图.png\"/></p>","isOut":false,"createTime":"2018-02-02 15:32:20","author":"总工会","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/dynamicIssue/9ec821854ba54833bc896fc740579923.png","title":"关于学习和贯彻党的十九大会议精神的讲话7","targetUrl":null}}
+2018-03-30 11:24:35,236 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:35,299 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/legalDetail?id=41
+2018-03-30 11:24:35,299 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":{"content":"<p><img src=\"http://wuliangye.scshangtong.com/fileUpload/static/upload/ueditor/image/20180202/1517556634405075168.png\" title=\"1517556634405075168.png\" alt=\"替换图.png\"/></p>","isOut":false,"createTime":"2018-02-02 15:30:36","author":"总工会","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/legalIssue/c193b8de4dec4f8b9d847ac32195e260.png","title":"关于学习和贯彻党的十九大会议精神的讲话23","targetUrl":null}}
+2018-03-30 11:24:35,299 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:35,408 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/mutualDetail?id=51
+2018-03-30 11:24:35,408 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":{"content":"<p>替换图<img src=\"http://wuliangye.scshangtong.com/fileUpload/static/upload/ueditor/image/20180202/1517556269249086695.png\" title=\"1517556269249086695.png\" alt=\"替换图.png\"/></p>","isOut":false,"createTime":"2018-02-02 15:24:30","author":"总工会","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/mutualIssue/a0538f001a5c4bfeb6954d9e2525af77.png","title":"关于学习和贯彻党的十九大会议精神的讲话20","targetUrl":null}}
+2018-03-30 11:24:35,408 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:35,453 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/promotionDetail?id=31
+2018-03-30 11:24:35,453 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":{"content":"<p>qweqweqwe</p>","isOut":false,"author":"总工会","createTime":"2018-02-02 15:31:03","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/promotionIssue/7855b41212194b2a801523aef003006c.png","title":"关于学习和贯彻党的十九大会议精神的讲话21","issueId":31,"isArticle":1,"targetUrl":null}}
+2018-03-30 11:24:35,453 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:24:35,493 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/psychologyDetail?id=31
+2018-03-30 11:24:35,493 - public.get_log - INFO - #####-----##:{"success":true,"errorCode":null,"error":null,"data":{"content":"<p><img src=\"http://wuliangye.scshangtong.com/fileUpload/static/upload/ueditor/image/20180202/1517556692935062630.png\" title=\"1517556692935062630.png\" alt=\"替换图.png\"/></p>","isOut":0,"createTime":"2018-02-02 15:31:34","author":"总工会","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/psychologyIssue/c9e8fb67da8d45c7932f9cb29272f6e1.png","title":"关于学习和贯彻党的十九大会议精神的讲话6","targetUrl":null}}
+2018-03-30 11:24:35,493 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,289 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/hostInfoChannel
+2018-03-30 11:30:28,289 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":[{"cover":null,"channelId":1,"name":"党"},{"cover":null,"channelId":2,"name":"国家"},{"cover":null,"channelId":3,"name":"集团"},{"cover":null,"channelId":4,"name":"工会"},{"cover":null,"channelId":5,"name":"职工"}]}
+2018-03-30 11:30:28,289 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,329 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/hostInfoList?count=10&channelId=3
+2018-03-30 11:30:28,329 - public.get_log - INFO - 返回数据：{"success":true,"errorCode":null,"error":null,"data":[{"content":"3","time":"2018-03-23 12:12:13","cover":"3","targetOut":false,"title":"3","channelId":3,"infoId":4,"targetUrl":null}]}
+2018-03-30 11:30:28,329 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,384 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/hostInfoDetail?id=2
+2018-03-30 11:30:28,384 - public.get_log - INFO - 返回数据
+2018-03-30 11:30:28,384 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,433 - public.get_log - INFO - #######-------##:http://wuliangye.scshangtong.com/puhuihua/app/unionService/activityChannel
+2018-03-30 11:30:28,434 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":[{"cover":null,"channelId":10,"name":"活动类别3"},{"cover":null,"channelId":16,"name":"活动类别4"},{"cover":null,"channelId":25,"name":"活动类别2"},{"cover":null,"channelId":27,"name":"活动类别8"},{"cover":null,"channelId":42,"name":"活动类别17"},{"cover":null,"channelId":51,"name":"活动类别19"},{"cover":null,"channelId":71,"name":"活动类别15"},{"cover":null,"channelId":81,"name":"活动类别1"},{"cover":null,"channelId":91,"name":"活动类别18"}]}
+2018-03-30 11:30:28,434 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,479 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/activityList?channelType=10&timeType=1&pageNo=1
+2018-03-30 11:30:28,479 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":[{"statusCode":5,"author":"总工会","createTime":"2017-08-01 15:23:57","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/activityIssue/618724b675624c9abe4020437f5c7a5a.png","title":"关于学习和贯彻党的十九大会议精神的讲话22","issueId":101,"statusDesc":"活动已结束"}]}
+2018-03-30 11:30:28,479 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,520 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/activityDetail?issueId=101
+2018-03-30 11:30:28,522 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":{"statusCode":5,"content":"<p><img src=\"http://wuliangye.scshangtong.com/fileUpload/static/upload/ueditor/image/20180202/1517556235973010894.png\" title=\"1517556235973010894.png\" alt=\"替换图.png\"/></p>","author":"总工会","createTime":"2017-08-01 15:23:57","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/activityIssue/618724b675624c9abe4020437f5c7a5a.png","title":"关于学习和贯彻党的十九大会议精神的讲话22","issueId":101,"isArticle":2,"statusDesc":"活动已结束"}}
+2018-03-30 11:30:28,522 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,561 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/dynamicInfoList?pageNo=1
+2018-03-30 11:30:28,561 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":[{"createTime":"2018-02-02 15:32:20","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/dynamicIssue/9ec821854ba54833bc896fc740579923.png","title":"关于学习和贯彻党的十九大会议精神的讲话7","issueId":31}]}
+2018-03-30 11:30:28,561 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,611 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/mutualList?pageNo=1
+2018-03-30 11:30:28,611 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":[{"createTime":"2018-02-02 15:24:30","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/mutualIssue/a0538f001a5c4bfeb6954d9e2525af77.png","title":"关于学习和贯彻党的十九大会议精神的讲话20","issueId":51}]}
+2018-03-30 11:30:28,611 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,645 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/promotionList?pageNo=1
+2018-03-30 11:30:28,647 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":[{"createTime":"2018-02-02 15:31:03","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/promotionIssue/7855b41212194b2a801523aef003006c.png","title":"关于学习和贯彻党的十九大会议精神的讲话21","issueId":31}]}
+2018-03-30 11:30:28,647 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,688 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/legalList?pageNo=1
+2018-03-30 11:30:28,688 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":[{"createTime":"2018-02-02 15:30:36","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/legalIssue/c193b8de4dec4f8b9d847ac32195e260.png","title":"关于学习和贯彻党的十九大会议精神的讲话23","issueId":41}]}
+2018-03-30 11:30:28,690 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,734 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/psychologyList?pageNo=1
+2018-03-30 11:30:28,734 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":[{"createTime":"2018-02-02 15:31:34","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/psychologyIssue/c9e8fb67da8d45c7932f9cb29272f6e1.png","title":"关于学习和贯彻党的十九大会议精神的讲话6","issueId":31}]}
+2018-03-30 11:30:28,734 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,802 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/consultationList
+2018-03-30 11:30:28,802 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":[{"feedback":null,"content":"today we will test this function:Fri Mar 30 11:24:35 2018","nickname":"gh60776","headImage":null},{"feedback":null,"content":"today we will test this function:Fri Mar 30 09:20:52 2018","nickname":"gh60776","headImage":null},{"feedback":null,"content":"today we will test this function:Fri Mar 30 09:20:02 2018","nickname":"gh60776","headImage":null},{"feedback":null,"content":"today we will test this function:Thu Mar 29 15:30:24 2018","nickname":"gh60776","headImage":null},{"feedback":null,"content":"today we will test this function:Thu Mar 29 15:28:46 2018","nickname":"gh60776","headImage":null}]}
+2018-03-30 11:30:28,802 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,802 - public.get_log - INFO - {'lega': 41, 'prom': 31, 'psyc': 31, 'dyna': 31, 'mutu': 51}
+2018-03-30 11:30:28,858 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/addConsultation
+2018-03-30 11:30:28,858 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":null}
+2018-03-30 11:30:28,858 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,903 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/dynamicInfoDetail?id=31
+2018-03-30 11:30:28,904 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":{"content":"<p><img src=\"http://wuliangye.scshangtong.com/fileUpload/static/upload/ueditor/image/20180202/1517556738894051694.png\" title=\"1517556738894051694.png\" alt=\"替换图.png\"/></p>","isOut":false,"createTime":"2018-02-02 15:32:20","author":"总工会","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/dynamicIssue/9ec821854ba54833bc896fc740579923.png","title":"关于学习和贯彻党的十九大会议精神的讲话7","targetUrl":null}}
+2018-03-30 11:30:28,904 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,943 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/legalDetail?id=41
+2018-03-30 11:30:28,943 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":{"content":"<p><img src=\"http://wuliangye.scshangtong.com/fileUpload/static/upload/ueditor/image/20180202/1517556634405075168.png\" title=\"1517556634405075168.png\" alt=\"替换图.png\"/></p>","isOut":false,"createTime":"2018-02-02 15:30:36","author":"总工会","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/legalIssue/c193b8de4dec4f8b9d847ac32195e260.png","title":"关于学习和贯彻党的十九大会议精神的讲话23","targetUrl":null}}
+2018-03-30 11:30:28,943 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:28,989 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/mutualDetail?id=51
+2018-03-30 11:30:28,989 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":{"content":"<p>替换图<img src=\"http://wuliangye.scshangtong.com/fileUpload/static/upload/ueditor/image/20180202/1517556269249086695.png\" title=\"1517556269249086695.png\" alt=\"替换图.png\"/></p>","isOut":false,"createTime":"2018-02-02 15:24:30","author":"总工会","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/mutualIssue/a0538f001a5c4bfeb6954d9e2525af77.png","title":"关于学习和贯彻党的十九大会议精神的讲话20","targetUrl":null}}
+2018-03-30 11:30:28,989 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:29,030 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/promotionDetail?id=31
+2018-03-30 11:30:29,030 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":{"content":"<p>qweqweqwe</p>","isOut":false,"author":"总工会","createTime":"2018-02-02 15:31:03","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/promotionIssue/7855b41212194b2a801523aef003006c.png","title":"关于学习和贯彻党的十九大会议精神的讲话21","issueId":31,"isArticle":1,"targetUrl":null}}
+2018-03-30 11:30:29,030 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:30:29,072 - public.get_log - INFO - 接口地址:http://wuliangye.scshangtong.com/puhuihua/app/unionService/psychologyDetail?id=31
+2018-03-30 11:30:29,072 - public.get_log - INFO - 返回数据:{"success":true,"errorCode":null,"error":null,"data":{"content":"<p><img src=\"http://wuliangye.scshangtong.com/fileUpload/static/upload/ueditor/image/20180202/1517556692935062630.png\" title=\"1517556692935062630.png\" alt=\"替换图.png\"/></p>","isOut":0,"createTime":"2018-02-02 15:31:34","author":"总工会","cover":"http://wuliangye.scshangtong.com/fileUpload/static/upload/psychologyIssue/c9e8fb67da8d45c7932f9cb29272f6e1.png","title":"关于学习和贯彻党的十九大会议精神的讲话6","targetUrl":null}}
+2018-03-30 11:30:29,072 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:31:30,174 - public.get_log - INFO - **********************************************************************
+2018-03-30 11:31:30,174 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 11:31:30,174 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 11:31:30,174 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9003,"error":"账号未激活","data":null}
+2018-03-30 11:38:10,030 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 11:38:10,030 - public.get_log - INFO - 接口请求地址 Test Interface:codeCreate
+2018-03-30 11:38:10,030 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app', 'type': 31}
+2018-03-30 11:38:10,030 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":11,"error":"获取付款码失败！","data":null}
+2018-03-30 14:41:48,404 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 14:41:48,404 - public.get_log - INFO - 接口请求地址 Test Interface:codeCreate
+2018-03-30 14:41:48,404 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785517', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'type': 31}
+2018-03-30 14:41:48,404 - public.get_log - INFO - 返回数据 Return Data:[Fiddler] DNS Lookup for "wuliangye.scshangtong.com" failed. System.Net.Sockets.SocketException 请求的名称有效，但是找不到请求的类型的数据。                                                                                                                                                                                                                                                                                                                                                                                                          
+2018-03-30 14:42:31,793 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 14:42:31,793 - public.get_log - INFO - 接口请求地址 Test Interface:codeCreate
+2018-03-30 14:42:31,793 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785517', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'type': 31}
+2018-03-30 14:42:31,793 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":11,"error":"获取付款码失败！","data":null}
+2018-03-30 14:54:11,487 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 14:54:11,489 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/validateCode
+2018-03-30 14:54:11,489 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/validateCode
+2018-03-30 14:54:11,489 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '18683953197', 'code': '339960'}
+2018-03-30 14:54:11,489 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '18683953197', 'code': '339960'}
+2018-03-30 14:54:11,489 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '18683953197', 'code': '339960'}
+2018-03-30 14:56:28,519 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 14:56:28,520 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/validateCode
+2018-03-30 14:56:28,520 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/validateCode
+2018-03-30 14:56:28,520 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '18683953197', 'code': '339960'}
+2018-03-30 14:56:28,520 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '18683953197', 'code': '339960'}
+2018-03-30 14:56:28,520 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '18683953197', 'code': '339960'}
+2018-03-30 14:56:28,520 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9902,"error":"验证码已使用","data":null}
+2018-03-30 14:56:28,520 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9902,"error":"验证码已使用","data":null}
+2018-03-30 14:56:28,520 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9902,"error":"验证码已使用","data":null}
+2018-03-30 14:56:28,520 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9902,"error":"验证码已使用","data":null}
+2018-03-30 14:56:28,569 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 14:56:28,569 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 14:56:28,569 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 14:56:28,569 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 14:56:28,569 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 14:56:28,569 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 14:56:28,569 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 14:56:28,569 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 14:56:28,569 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 14:56:28,569 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 14:56:28,569 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 14:56:28,571 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': None, 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': None, 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': None, 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': None, 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': None, 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': None, 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': None, 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 14:56:28,571 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 15:00:11,158 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:00:11,158 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 15:00:11,158 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 15:00:11,158 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9003,"error":"账号未激活","data":null}
+2018-03-30 15:01:04,391 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:01:04,391 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 15:01:04,391 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 15:01:04,391 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9003,"error":"账号未激活","data":null}
+2018-03-30 15:02:01,608 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:02:01,608 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/validateCode
+2018-03-30 15:02:01,608 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/validateCode
+2018-03-30 15:02:01,609 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '18683953197', 'code': '074139'}
+2018-03-30 15:02:01,609 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '18683953197', 'code': '074139'}
+2018-03-30 15:02:01,609 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '18683953197', 'code': '074139'}
+2018-03-30 15:02:01,609 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":"成功","data":"jfRS9LlJ"}
+2018-03-30 15:02:01,609 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":"成功","data":"jfRS9LlJ"}
+2018-03-30 15:02:01,609 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":"成功","data":"jfRS9LlJ"}
+2018-03-30 15:02:01,609 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":"成功","data":"jfRS9LlJ"}
+2018-03-30 15:02:01,944 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:02:01,944 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:02:01,944 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:02:01,944 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:02:01,944 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:02:01,944 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 15:02:01,944 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 15:02:01,944 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 15:02:01,944 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 15:02:01,944 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 15:02:01,944 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 15:02:01,946 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': u'jfRS9LlJ', 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 15:02:01,946 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': u'jfRS9LlJ', 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 15:02:01,946 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': u'jfRS9LlJ', 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 15:02:01,946 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': u'jfRS9LlJ', 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 15:02:01,946 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': u'jfRS9LlJ', 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 15:02:01,946 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': u'jfRS9LlJ', 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 15:02:01,946 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': u'jfRS9LlJ', 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 15:02:01,947 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9008,"error":"密码设置失败","data":null}
+2018-03-30 15:02:01,947 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9008,"error":"密码设置失败","data":null}
+2018-03-30 15:02:01,947 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9008,"error":"密码设置失败","data":null}
+2018-03-30 15:02:01,947 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9008,"error":"密码设置失败","data":null}
+2018-03-30 15:02:01,947 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9008,"error":"密码设置失败","data":null}
+2018-03-30 15:02:01,947 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9008,"error":"密码设置失败","data":null}
+2018-03-30 15:02:01,947 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9008,"error":"密码设置失败","data":null}
+2018-03-30 15:02:01,947 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9008,"error":"密码设置失败","data":null}
+2018-03-30 15:05:03,835 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:05:03,835 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/validateCode
+2018-03-30 15:05:03,835 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '18683953197', 'code': '074139'}
+2018-03-30 15:05:03,835 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9902,"error":"验证码已使用","data":null}
+2018-03-30 15:05:03,956 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:05:03,956 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 15:05:03,956 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': None, 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 15:05:03,956 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 15:06:39,992 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:06:39,992 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/validateCode
+2018-03-30 15:06:39,992 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'code': '198352'}
+2018-03-30 15:06:39,992 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9902,"error":"验证码已使用","data":null}
+2018-03-30 15:06:40,117 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:06:40,117 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 15:06:40,117 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': None, 'phone': '15680785518', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 15:06:40,117 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 15:07:19,611 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:07:19,611 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/validateCode
+2018-03-30 15:07:19,611 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'code': '696745'}
+2018-03-30 15:07:19,611 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":"成功","data":"GFLsBw9s"}
+2018-03-30 15:07:19,651 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:07:19,651 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 15:07:19,651 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': u'GFLsBw9s', 'phone': '15680785518', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 15:07:19,651 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9004,"error":"不允许重复注册","data":null}
+2018-03-30 15:09:41,832 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:09:41,832 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 15:09:41,832 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 15:09:41,832 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9003,"error":"账号未激活","data":null}
+2018-03-30 15:10:20,740 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:10:20,740 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 15:10:20,740 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785517', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app'}
+2018-03-30 15:10:20,740 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9003,"error":"账号未激活","data":null}
+2018-03-30 15:15:08,842 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:15:08,842 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 15:15:08,842 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app'}
+2018-03-30 15:15:08,842 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":null,"data":[{"balance":"910.49","phone":"18683953197","relation":"配偶","userStatus":0,"userName":"18683953197"}]}
+2018-03-30 15:15:44,723 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:15:44,723 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 15:15:44,723 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 15:15:44,723 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":null,"data":[{"balance":"3285.96","phone":"15566666661","relation":"父子","userStatus":0,"userName":"fds"},{"balance":"3285.96","phone":"15680785517","relation":"配偶","userStatus":2,"userName":"feng"}]}
+2018-03-30 15:17:30,298 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:17:30,298 - public.get_log - INFO - 接口请求地址 Test Interface:codeCreate
+2018-03-30 15:17:30,298 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785517', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'type': 31}
+2018-03-30 15:17:30,298 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":11,"error":"获取付款码失败！","data":null}
+2018-03-30 15:17:40,382 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:17:40,384 - public.get_log - INFO - 接口请求地址 Test Interface:codeCreate
+2018-03-30 15:17:40,384 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'type': 31}
+2018-03-30 15:17:40,384 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":11,"error":"获取付款码失败！","data":null}
+2018-03-30 15:20:48,805 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:20:48,805 - public.get_log - INFO - 接口请求地址 Test Interface:transferFamily
+2018-03-30 15:20:48,805 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'transferAmount': 1000, 'payPwd': '123456', 'familyPhone': '18683953197'}
+2018-03-30 15:20:48,806 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9101,"error":"支付密码错误","data":null}
+2018-03-30 15:21:25,552 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:21:25,553 - public.get_log - INFO - 接口请求地址 Test Interface:codeCreate
+2018-03-30 15:21:25,553 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app', 'type': 31}
+2018-03-30 15:21:25,553 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":11,"error":"获取付款码失败！","data":null}
+2018-03-30 15:21:51,119 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:21:51,119 - public.get_log - INFO - 接口请求地址 Test Interface:transferFamily
+2018-03-30 15:21:51,119 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'transferAmount': 1000, 'payPwd': '123456', 'familyPhone': '18683953197'}
+2018-03-30 15:21:51,119 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9101,"error":"支付密码错误","data":null}
+2018-03-30 15:31:43,542 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:31:43,542 - public.get_log - INFO - 接口请求地址 Test Interface:hasPayPassword
+2018-03-30 15:31:43,542 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'type': 31}
+2018-03-30 15:31:43,542 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":null,"data":true}
+2018-03-30 15:32:11,428 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:32:11,428 - public.get_log - INFO - 接口请求地址 Test Interface:hasPass
+2018-03-30 15:32:11,430 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'type': 31}
+2018-03-30 15:32:11,430 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 15:32:34,987 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:32:34,987 - public.get_log - INFO - 接口请求地址 Test Interface:hasPass
+2018-03-30 15:32:34,987 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app'}
+2018-03-30 15:32:34,987 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 15:33:37,976 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:33:37,976 - public.get_log - INFO - 接口请求地址 Test Interface:setPayPassword
+2018-03-30 15:33:37,976 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'payPassword': '123456'}
+2018-03-30 15:33:37,976 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":9009,"error":"用户已设置支付密码","data":null}
+2018-03-30 15:34:39,628 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:34:39,628 - public.get_log - INFO - 接口请求地址 Test Interface:modifyPayPassword
+2018-03-30 15:34:39,628 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'oldPayPassword': '123456', 'newPayPassword': '111111'}
+2018-03-30 15:34:39,628 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":34,"error":"密码错误次数过多！","data":null}
+2018-03-30 15:35:46,029 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:35:46,029 - public.get_log - INFO - 接口请求地址 Test Interface:payValidate
+2018-03-30 15:35:46,029 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'payPassword': '123456'}
+2018-03-30 15:35:46,029 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":34,"error":"密码错误次数过多！","data":null}
+2018-03-30 15:36:54,842 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:36:54,842 - public.get_log - INFO - 接口请求地址 Test Interface:forgetPayPassword
+2018-03-30 15:36:54,844 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'securityCode': '123456'}
+2018-03-30 15:36:54,844 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":3,"error":"验证码错误！","data":null}
+2018-03-30 15:38:58,915 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:38:58,915 - public.get_log - INFO - 接口请求地址 Test Interface:forgetPayPassword
+2018-03-30 15:38:58,915 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'securityCode': '590126'}
+2018-03-30 15:38:58,915 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":3,"error":"验证码错误！","data":null}
+2018-03-30 15:41:20,546 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:41:20,546 - public.get_log - INFO - 接口请求地址 Test Interface:resetPayPassword
+2018-03-30 15:41:20,546 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': '123456', 'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'payPassword': '123456'}
+2018-03-30 15:41:20,546 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9902,"error":"校验码错误","data":null}
+2018-03-30 15:44:16,812 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:44:16,812 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/validateCode
+2018-03-30 15:44:16,812 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '18683953197', 'code': '123654'}
+2018-03-30 15:44:16,813 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9902,"error":"验证码已使用","data":null}
+2018-03-30 15:44:16,868 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:44:16,868 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 15:44:16,868 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': None, 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 15:44:16,868 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 15:50:14,140 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:50:14,140 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 15:50:14,141 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '18683953197', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 15:50:14,141 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9003,"error":"账号未激活","data":null}
+2018-03-30 15:51:37,921 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:51:37,921 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/validateCode
+2018-03-30 15:51:37,921 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '18683953197', 'code': '101211'}
+2018-03-30 15:51:37,921 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":"成功","data":"UNQCsot2"}
+2018-03-30 15:51:38,085 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:51:38,085 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/register
+2018-03-30 15:51:38,085 - public.get_log - INFO - 传入参数 Insert Data:{'validateStr': u'UNQCsot2', 'phone': '18683953197', 'loginDevice': 2, 'terminal': 'app', 'activeCode': '910350'}
+2018-03-30 15:51:38,085 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9008,"error":"密码设置失败","data":null}
+2018-03-30 15:58:13,727 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 15:58:13,727 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 15:58:13,727 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 15:58:13,727 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":null,"data":[{"balance":"3285.96","phone":"15566666661","relation":"父子","userStatus":0,"userName":"fds"},{"balance":"3285.96","phone":"15680785517","relation":"配偶","userStatus":2,"userName":"feng"}]}
+2018-03-30 16:00:38,341 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:00:38,341 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 16:00:38,341 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 16:00:38,341 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":null,"data":[{"balance":"3285.96","phone":"15566666661","relation":"父子","userStatus":0,"userName":"fds"},{"balance":"3285.96","phone":"15680785517","relation":"配偶","userStatus":2,"userName":"feng"}]}
+2018-03-30 16:05:03,246 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:05:03,246 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/myFamily
+2018-03-30 16:05:03,246 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 16:05:03,246 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":null,"data":[{"balance":"0","phone":"15566666661","relation":"父子","userStatus":0,"userName":"fds"},{"balance":"0","phone":"15680785517","relation":"配偶","userStatus":2,"userName":"feng"}]}
+2018-03-30 16:05:38,796 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:05:38,796 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/userInfo
+2018-03-30 16:05:38,796 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app'}
+2018-03-30 16:05:38,796 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":null,"data":{"balance":"3285.96","phone":"17761196077","nickName":"gh60776","welfareFlag":null,"headImage":null,"depName":null,"unionId":7,"userName":"苦左","depId":0,"unionName":null,"userType":"0"}}
+2018-03-30 16:08:15,062 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:08:15,062 - public.get_log - INFO - 接口请求地址 Test Interface:resetPayPassword
+2018-03-30 16:08:15,062 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'securityCode': '123456'}
+2018-03-30 16:08:15,062 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 16:08:32,132 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:08:32,132 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/sendSecurityCode
+2018-03-30 16:08:32,132 - public.get_log - INFO - 传入参数 Insert Data:15680785518
+2018-03-30 16:08:32,132 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9102,"error":"有效期内不允许重复发送","data":null}
+2018-03-30 16:09:10,328 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:09:10,328 - public.get_log - INFO - 接口请求地址 Test Interface:resetPayPassword
+2018-03-30 16:09:10,328 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'securityCode': '12555'}
+2018-03-30 16:09:10,328 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 16:10:11,322 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:10:11,322 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/sendSecurityCode
+2018-03-30 16:10:11,322 - public.get_log - INFO - 传入参数 Insert Data:15680785518
+2018-03-30 16:10:11,322 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":32,"error":"发送失败","data":null}
+2018-03-30 16:10:20,260 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:10:20,260 - public.get_log - INFO - 接口请求地址 Test Interface:resetPayPassword
+2018-03-30 16:10:20,260 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'securityCode': '1215122'}
+2018-03-30 16:10:20,262 - public.get_log - INFO - 返回数据 Return Data:{"data":null,"error":"系统错误，请重试!","errorCode":0,"success":false}
+2018-03-30 16:27:50,289 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:27:50,289 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/sendSecurityCode
+2018-03-30 16:27:50,289 - public.get_log - INFO - 传入参数 Insert Data:15680785518
+2018-03-30 16:27:50,289 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":32,"error":"发送失败","data":null}
+2018-03-30 16:27:58,651 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:27:58,651 - public.get_log - INFO - 接口请求地址 Test Interface:forgetPayPassword
+2018-03-30 16:27:58,651 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '1f7e0db62349483d9f0b43dbd6318985_app', 'securityCode': ''}
+2018-03-30 16:27:58,651 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9001,"error":"参数不正确","data":null}
+2018-03-30 16:30:36,112 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:30:36,112 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/sendSecurityCode
+2018-03-30 16:30:36,114 - public.get_log - INFO - 传入参数 Insert Data:15680785518
+2018-03-30 16:30:36,114 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":32,"error":"发送失败","data":null}
+2018-03-30 16:30:57,670 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:30:57,671 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/sendSecurityCode
+2018-03-30 16:30:57,671 - public.get_log - INFO - 传入参数 Insert Data:15680785518
+2018-03-30 16:30:57,671 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":9101,"error":"一小时内发送次数超限","data":null}
+2018-03-30 16:31:04,982 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:31:04,982 - public.get_log - INFO - 接口请求地址 Test Interface:forgetPayPassword
+2018-03-30 16:31:04,982 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '15680785518', 'token': '2a7570e2fec348e1b91df961ccf8ee0e_app', 'securityCode': '123551'}
+2018-03-30 16:31:04,982 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":3,"error":"验证码错误！","data":null}
+2018-03-30 16:32:06,408 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:32:06,408 - public.get_log - INFO - 接口请求地址 Test Interface:http://wuliangye.scshangtong.com/puhuihua/app/userInfo/sendSecurityCode
+2018-03-30 16:32:06,408 - public.get_log - INFO - 传入参数 Insert Data:17761196077
+2018-03-30 16:32:06,408 - public.get_log - INFO - 返回数据 Return Data:{"success":true,"errorCode":null,"error":null,"data":null}
+2018-03-30 16:33:08,581 - public.get_log - INFO - ****************************************************************************************************
+2018-03-30 16:33:08,581 - public.get_log - INFO - 接口请求地址 Test Interface:forgetPayPassword
+2018-03-30 16:33:08,581 - public.get_log - INFO - 传入参数 Insert Data:{'phone': '17761196077', 'token': '1f7e0db62349483d9f0b43dbd6318985_app', 'securityCode': '966677'}
+2018-03-30 16:33:08,581 - public.get_log - INFO - 返回数据 Return Data:{"success":false,"errorCode":3,"error":"验证码错误！","data":null}
