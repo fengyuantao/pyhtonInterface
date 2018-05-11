@@ -39,10 +39,6 @@ class test_AppInterface(unittest.TestCase):
         res = requests.post(self.validateCode,data = put_data)
         print self.validateCode + " : " + res._content
 
-
-
-
-
     def tearDown(self):
         pass
 

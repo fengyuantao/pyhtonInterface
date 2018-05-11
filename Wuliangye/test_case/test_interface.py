@@ -11,8 +11,10 @@ from DATA import DATA
 ## 获取验证码码
 #login
 logger = get_log
-phone = "18683953197"
+phone = "18602876515"
+
 sendCode = requests.post(DATA.sendSecurityCode(),data={'phone':phone})
+logger.insertLog(sendCode.url,phone,sendCode.text)
 
 securityCode = raw_input("securityCode:")
 
@@ -23,14 +25,14 @@ validateStr =  validateCode.json()["data"]
 logger.insertLog(DATA.validateCode(),data1,validateCode.text)
 
 url = DATA.register()
-data = {'phone':phone,'activeCode':'910350','validateStr':validateStr,'terminal':'app','loginDevice':2}
+data = {'phone':phone,'activeCode':'708288','validateStr':validateStr,'terminal':'app','loginDevice':2}
 
 result = requests.post(url=url,data=data)
 logger.insertLog(url,data,result.text)
 
-
 '''
-login = requests.post(DATA.login(),data={'phone':'17761196077','securityCode':securityCode,'terminal':'app','loginDevice':2})
+
+login = requests.post(DATA.login(),data={'phone':phone,'securityCode':securityCode,'terminal':'app','loginDevice':2})
 print login._content
 '''
 

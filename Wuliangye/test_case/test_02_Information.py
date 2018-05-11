@@ -23,12 +23,12 @@ class Information(unittest.TestCase):
         insertLog(result.url,None,result.text)
         res = result.json()["data"]
         channelId = res[2]['channelId']
-        parms = {"channelId":channelId,"count":10}
+        parms = {"channelId":channelId,"count":1}
         res_hostInfoList = requests.get(url.hostInfoList,params=parms)
 
         insertLog(url.hostInfoList,parms,res_hostInfoList.text)
 
-        parms_hostInfoDetail = {"id":2}
+        parms_hostInfoDetail = {"id":9}
         res_hostInfoDetail = requests.get(url.hostInfoDetail,params=parms_hostInfoDetail)
         insertLog(url.hostInfoDetail,parms_hostInfoDetail,res_hostInfoDetail.text)
 
@@ -73,7 +73,7 @@ class Information(unittest.TestCase):
         for pageNo in  listpageNo:
 
             if pageNo == 'addConsultation':
-                result = requests.post(self.url.__dict__[pageNo],data={'phone':'17761196077','token':'1f7e0db62349483d9f0b43dbd6318985_app','content':'today we will test this function:{}'.format(time.asctime())})
+                result = requests.post(self.url.__dict__[pageNo],data={'phone':'17761196077','token':'1f7e0db62349483d9f0b43dbd6318985_app','content':'today dsd dswe will test this function:{}'.format(time.asctime())})
             else:
                 parms_ID["id"] = res_dict[pageNo[:4]]
                 result = requests.get(self.url.__dict__[pageNo],params=parms_ID)
